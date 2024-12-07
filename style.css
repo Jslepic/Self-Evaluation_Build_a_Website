@@ -1,0 +1,103 @@
+/* DEBUG */
+/* * {
+    background-color: black !important;
+    color: black !important;
+    border: 2px solid red !important;
+} */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 60px; /* Set the height of the navbar */
+  background-color: #71a2b6; /* Optional background color */
+  display: flex;
+  align-items: center; /* Center items vertically inside the nav */
+  width: 100%;
+  font-family: Cabin, sans-serif;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+nav ul li a,
+nav ul li p {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li p.active {
+  color: #f7ef81;
+  cursor: default;
+  font-weight: bold;
+}
+
+.hero-section {
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  background-image: url("assets/water.jpg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative; /* To position the overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Text color */
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure overlay is behind the content */
+}
+
+.hero-content {
+  font-family: Cabin, sans-serif;
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+  text-align: center; /* Center the text */
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Adjust heading size */
+  margin: 0;
+}
+
+.hero-content h3 {
+  font-size: 1.5rem; /* Adjust subheading size */
+  margin-top: 10px;
+}
+
+section {
+  margin: 10px;
+  font-family: Quicksand, Arial, Helvetica, sans-serif;
+}
+
+section img {
+  float: left;
+  width: 300px;
+  margin: 0 10px 10px 0;
+}
+
+section p {
+  font-size: clamp(10px, 20px, 30px);
+  line-height: 1.6;
+}
